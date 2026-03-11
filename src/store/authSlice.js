@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   token: localStorage.getItem('jwtToken') || null,
-  user: null, // User details fetched after login
+  user: null,
   isAuthenticated: !!localStorage.getItem('jwtToken'),
 };
 
@@ -14,17 +14,18 @@ const authSlice = createSlice({
       state.token = action.payload.token;
       state.user = action.payload.user;
       state.isAuthenticated = true;
-      // Token is already stored in localStorage in LoginForm
     },
     logout: (state) => {
       state.token = null;
       state.user = null;
       state.isAuthenticated = false;
       localStorage.removeItem('jwtToken');
-      // Optionally clear other state slices if needed
     },
   },
 });
 
 export const { setCredentials, logout } = authSlice.actions;
+
+export const selectIsAuthenticated = (state) => state.auth.isAuthenticated;
+
 export default authSlice.reducer;
