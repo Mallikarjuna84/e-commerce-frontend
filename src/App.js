@@ -8,7 +8,7 @@ import ProductListPage from './pages/ProductListPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import CartPage from './pages/cartPage';
+import ShoppingCartPage from './pages/ShoppingCartPage';
 import OrderHistoryPage from './pages/OrderHistoryPage';
 
 // Import Auth Selector
