@@ -30,7 +30,7 @@ function App() {
           <Route path="/products/:id" element={<ProductDetailPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-          <Route path="/cart" element={<CartPage />} />
+          <Route path="/cart" element={<ShoppingCartPage />} />
 
           {/* Protected Route */}
           <Route
